@@ -1,1 +1,6 @@
 StationFive Radio Button Issue
+
+The applicaton was developed using Angular 7 .
+Lodash functions have been used predominantly and functional logic split up into functions.
+To run the application please clonedownload as zip and do an npm install.
+and ng serve will host the application with the url https://localhost:4200
