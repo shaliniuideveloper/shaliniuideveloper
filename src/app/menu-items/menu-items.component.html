@@ -1,0 +1,32 @@
+<form>
+    <p>Please select your preferred Menu Type:</p>
+    <div *ngFor="let item of response[0]; let i = index">
+      <input type="radio" id="radio-{{item.id}}" 
+      value="{{item.value}}" name="menutype"
+      [(ngModel)]="item.checked"
+      (click)="onChangeMenuType(item)">
+      <label for="radio-{{item.id}}"> {{item.value}}</label><br>
+    </div>
+    <div>
+      <p>Please select your main course:</p>
+    </div>
+    <div *ngFor="let item of response[1]; let i = index">
+      <input type="radio" id="radio-{{item.id}}"
+       name="maincourse" value="{{item.value}}"
+       (click)="onChangeMainCourse(item)"
+       [disabled]="item.disabled">
+      <label for="radio-{{item.id}}"> {{item.value}}</label><br>
+    </div>
+    <div>
+        <p>Please select your accompaniment:</p>
+      </div>
+    <div *ngFor="let item of response[2]; let i = index">
+        <input type="radio" id="radio-{{item.id}}"
+         name="accompaniment" value="{{item.value}}"
+         [disabled]="item.disabled">
+        <label for="radio-{{item.id}}"> {{item.value}}</label><br>
+      </div>
+    <div>
+      <button type="submit" onclick="OnCallSubmit()">Submit</button>
+    </div>
+</form>
